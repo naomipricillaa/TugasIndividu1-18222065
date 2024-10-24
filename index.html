@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysiLab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo3.png">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="PhysiLab Logo" class="logo">
+            <h1>PhysiLab</h1>
+        </div>
+
+        <nav class="nav-links-mobile-only">
+            <a href="landing.html" class="home-link">Home</a>
+        </nav>
+  
+        <nav class="nav-links">
+            <a href="index.html">Calculator</a>
+            <a href="material.html">Material</a>
+            <a href="landing.html">Home</a>
+        </nav>
+    </header>
+    
+    <p class="below-header-text">
+        Thermodynamics Virtual Lab Calculator
+    </p>
+
+    <div class="lab-container">
+        <div class="thermometer-container">
+            <img src="images/thermometer.png" alt="Termometer" class="thermometer">
+            <input type="range" min="273" max="373" value="300" id="suhuSlider" oninput="updateSuhu(this.value)">
+            <p id="suhuValue">Suhu: 300K</p> 
+        </div>
+
+        <div class="input-container">
+            <label for="volume">Volume (m³):</label>
+            <input type="number" id="volume" placeholder="Masukkan volume dalam m³" value="5">
+            
+            <label for="mol">Jumlah Mol (mol):</label>
+            <input type="number" id="mol" placeholder="Masukkan jumlah mol" value="5">
+
+            <label for="suhu">Suhu (K):</label>
+            <input type="number" id="suhu" value="300" readonly> 
+
+            <button onclick="hitungTekanan()">Hitung Tekanan</button>
+        </div>
+
+        <div class="result-container">
+            <h3>Hasil Perhitungan:</h3>
+            <p id="tekananOutput">Tekanan Gas: Tekanan akan ditampilkan di sini setelah perhitungan.</p>
+        </div>
+    </div>
+</div>
+
+
+    <script src="content.js"></script>
+</body>
+</html>
