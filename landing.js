@@ -1,14 +1,14 @@
 function handleScrollToSection(event) {
-    event.preventDefault(); 
+    event.preventDefault();
     scrollToCoursesSection();
 }
 
 function scrollToCoursesSection() {
     const coursesSection = document.querySelector('#courses-section');
-    
+
     if (coursesSection) {
         coursesSection.scrollIntoView({
-            behavior: 'smooth' 
+            behavior: 'smooth'
         });
     }
 }
